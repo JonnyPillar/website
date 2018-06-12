@@ -194,7 +194,7 @@ h3 {
 }
 
 .projectThumbs .projectThumb .projectThumbImage img {
-  height: 265px;
+  height: 215px;
   width: 100%;
   object-fit: contain;
   display: block;

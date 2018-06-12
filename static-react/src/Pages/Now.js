@@ -1,11 +1,9 @@
 import React from 'react';
 import { createClient } from 'contentful';
-import Content from './Components/Content';
+import Page from '../Components/Page';
+import Markup from '../Components/Markup';
 
-//  OLD Version
-//
-
-class Page extends React.Component {
+class Now extends React.Component {
   constructor(props) {
     super(props);
 
@@ -38,9 +36,15 @@ class Page extends React.Component {
     if (!this.state.data) return null;
 
     return (
-      <Content data={this.state.data} />
+      <Page page="now" title={this.state.data.title}>
+        <div className="jumbotron">
+          <h1>{this.state.data.title}</h1>
+          <h2>Im back home in Sheffield :)</h2>
+        </div>
+        <Markup content={this.state.data.content} />
+      </Page>
     );
   }
 }
 
-export default Page;
+export default Now;

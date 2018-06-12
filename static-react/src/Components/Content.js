@@ -9,13 +9,11 @@ class Content extends React.Component {
     const content = parseMarkup(this.props.data.content);
 
     return (
-      <React.Fragment>
-        <div className="container">
-          <Helmet title={this.props.data.title} />
-          <h1>{this.props.data.title}</h1>
-          {content}
-        </div>
-      </React.Fragment>
+      <div className="container">
+        <Helmet title={this.props.data.title} />
+        <h1>{this.props.data.title}</h1>
+        {content}
+      </div>
     );
   }
 }

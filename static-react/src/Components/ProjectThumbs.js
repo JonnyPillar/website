@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import LazyLoad from 'react-lazyload';
+import ProjectThumbItem from './ProjectThumbItem';
 
 class ProjectsThumbs extends React.Component {
   render() {
@@ -14,22 +13,8 @@ class ProjectsThumbs extends React.Component {
   }
 
   _project = (project) => {
-    var coverPhotoUrl = project.fields.logo.fields.file.url;
-
     return (
-      <Link key={project.sys.id} to="/projects" className="projectThumb">
-        <div className="projectThumbImage">
-          <LazyLoad height={200} offset={50}>
-            <img src={coverPhotoUrl}  />
-          </LazyLoad>
-        </div>
-        <div className="projectThumbTitle">
-          <h3>{project.fields.title}</h3>
-        </div>
-        <div className="projectThumbContent">
-          {project.fields.shortContent}
-        </div>
-      </Link>
+      <ProjectThumbItem key={project.sys.id} project={project} />
     );
   }
 }

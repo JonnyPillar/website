@@ -1,6 +1,7 @@
 import React from 'react';
 import { createClient } from 'contentful';
-import ProjectsThumbs from './Components/ProjectThumbs';
+import Page from '../Components/Page';
+import ProjectsThumbs from '../Components/ProjectThumbs';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -30,13 +31,13 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <React.Fragment >
-        <div className="container">
+      <Page page="projects" title="Projects">
+        <div className="jumbotron">
           <h1>Projects</h1>
-          <p>These are a few samples of some of my work from the past year.</p>
-          <ProjectsThumbs projects={this.state.projects} />
+          <h2>These are a few samples of some of my work from the past year.</h2>
         </div>
-      </React.Fragment>
+        <ProjectsThumbs projects={this.state.projects} />
+      </Page>
     );
   }
 }
