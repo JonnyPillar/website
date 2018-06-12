@@ -1,6 +1,6 @@
 import React from 'react';
 import { createClient } from 'contentful';
-import Project from './Components/Project';
+import ProjectsThumbs from './Components/ProjectThumbs';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -29,11 +29,15 @@ class Projects extends React.Component {
   }
 
   render() {
-    return this.state.projects.map(project => {
-      return (
-        <Project key={project.fields.slug} data={project.fields}/>
-      );
-    });
+    return (
+      <React.Fragment >
+        <div className="container">
+          <h1>Projects</h1>
+          <p>These are a few samples of some of my work from the past year.</p>
+          <ProjectsThumbs projects={this.state.projects} />
+        </div>
+      </React.Fragment>
+    );
   }
 }
 

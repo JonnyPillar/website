@@ -10,9 +10,11 @@ class Content extends React.Component {
 
     return (
       <React.Fragment>
-        <Helmet title={this.props.data.title} />
-        <h1>{this.props.data.title}</h1>
-        {content}
+        <div className="container">
+          <Helmet title={this.props.data.title} />
+          <h1>{this.props.data.title}</h1>
+          {content}
+        </div>
       </React.Fragment>
     );
   }

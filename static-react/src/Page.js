@@ -19,7 +19,7 @@ class Page extends React.Component {
 
     client
       .getEntries({
-        'fields.slug': this.props.match.params.id,
+        'fields.slug': this.props.match.path.substring(1),
         'content_type': 'page'
       })
       .then(response => {

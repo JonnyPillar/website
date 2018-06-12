@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'Sailec';
+  src: url('~/fonts/Sailec%20Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sailec';
+  src: url('~/fonts/Sailec%20Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sailec';
+  src: url('~/fonts/Sailec%20Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Font awesome 5 brands 400';
+  src: url('~/fonts/font-awesome.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*
+  Generic
+*/
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+.App {
+  font-family: Sailec,sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/*
+  Navigation
+*/
+
+.main-nav-container-white {
+  position: static;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: auto;
+  max-width: 1920px;
+  padding: 50px 100px;
+  border-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #f6f6f6;
+}
+
+/*
+  Footer
+*/
+
+.footer {
+  background-color: #1b1b1b;
+  padding: 50px 100px;
+}
+
+.footerText {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.social-panel {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;;
+  justify-content: center;
+}
+
+@media only screen and (max-width : 786px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+/*
+  Jumbotron
+ */
+
+ .jumbotron, .aboutJumbotron {
+   display: block;
+   max-width: 900px;
+   padding-top: 100px;
+   padding-bottom: 150px;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 22px;
+ }
+
+ .aboutJumbotron{
+   padding-top: 50px;
+   padding-bottom: 20px;
+ }
+
+ @media only screen and (max-width : 786px) {
+   .jumbotron {
+     padding: 20px 0 70px;
+   }
+
+   .aboutJumbotron {
+     padding: 40px 0 20px;
+   }
+ }
+
+/*
+  Home
+ */
+
+.homeContent {
+  padding: 0 150px;
+}
+
+@media only screen and (max-width : 786px) {
+  .homeContent {
+    padding: 20px 0 70px;
+  }
+}
+
+.aboutPhoto {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+  Project Thumbs
+*/
+
+.projectTitle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.projectThumbs {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+}
+
+@media only screen and (max-width : 786px) {
+  .projectThumbs {
+    flex-direction: column;
+  }
+}
+
+
+.projectThumbs {
+  margin-bottom: 100px;
+}
+
+.projectThumbs .projectThumb {
+  display: flex;
+  flex-direction: column;
+  color: #2b2b2b;
+  flex: 1;
+}
+
+.projectThumbs .projectThumb:hover {
+  text-decoration: none;
+}
+
+.projectThumbs .projectThumb .projectThumbImage img {
+  height: 265px;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.projectThumbs .projectThumb .projectThumbImage:hover {
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: .8;
+}
+
+.projectThumbs .projectThumb .projectThumbTitle {
+  align-self: flex-start;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 20px 20px 20px 0;
+  height: 100px;
+}
+
+.projectThumbs .projectThumb:hover .projectThumbTitle {
+  text-decoration: underline;
+}
+
+.projectThumbs .projectThumb .projectThumbContent {
+  padding: 0 30px 0 0;
+}
+
+.social-media-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin: 8px 8px 0;
+    border-radius: 50%;
+    background-color: #1b1b1b;
+    transition: background-color .2s ease;
+}
+
+.social-icon-v2 {
+    padding-right: 0;
+    padding-left: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    transition: color .2s ease;
+    font-family: 'Font awesome 5 brands 400',sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-transform: none;
+}
