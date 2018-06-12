@@ -42,7 +42,7 @@ class Project extends React.Component {
           <h1>{this.state.data.title}</h1>
           <h2>{this.state.data.shortContent}</h2>
         </div>
-        <Image item={this.state.data.coverPhoto} />
+        <Image item={this.state.data.coverPhoto} height={710}/>
         <h2>About</h2>
         <Markup content={this.state.data.about} />
         <h2>Challenge</h2>

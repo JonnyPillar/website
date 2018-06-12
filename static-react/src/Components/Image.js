@@ -12,7 +12,13 @@ class Image extends React.Component {
 
     return (
       <LazyLoad height={this.props.height} offset={this.props.offset}>
-        <img src={imageUrl} height={this.props.height} />
+        <img src={imageUrl} style={{
+          display: 'block',
+          maxWidth:'100%',
+          maxHeight: this.props.height,
+          width: 'auto',
+          height: 'auto'
+        }}/>
       </LazyLoad>
     );
   }
