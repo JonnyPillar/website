@@ -56,10 +56,10 @@ class Home extends React.Component {
         <div className="aboutPhoto">
           <Image item={this.state.data.photo} height={230} />
         </div>
-        <div className="aboutJumbotron">\
+        <div className="aboutJumbotron">
           <Markup content={this.state.data.aboutJumbotron} />
         </div>
-        <div className="homeContent">
+        <div className="home-content">
           <Markup content={this.state.data.content} />
         </div>
       </Page>

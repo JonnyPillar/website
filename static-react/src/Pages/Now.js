@@ -36,12 +36,14 @@ class Now extends React.Component {
     if (!this.state.data) return null;
 
     return (
-      <Page page="now" title={this.state.data.title}>
+      <Page page="now" {...this.state.data}>
         <div className="jumbotron">
           <h1>{this.state.data.title}</h1>
           <h2>Im back home in Sheffield :)</h2>
         </div>
-        <Markup content={this.state.data.content} />
+        <div className="markup-content">
+          <Markup content={this.state.data.content} />
+        </div>
       </Page>
     );
   }

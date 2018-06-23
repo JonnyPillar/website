@@ -31,7 +31,12 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <Page page="projects" title="Projects">
+      <Page
+        page="projects"
+        seoTitle="Projects"
+        seoDescription="These are a few samples of some of my work from the past year."
+        seoKeywords="Jonny Pillar, Projects, Software Engineer">
+        
         <div className="jumbotron">
           <h1>Projects</h1>
           <h2>These are a few samples of some of my work from the past year.</h2>

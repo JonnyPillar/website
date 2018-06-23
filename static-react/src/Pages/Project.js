@@ -25,10 +25,14 @@ class Project extends React.Component {
         'content_type': 'project'
       })
       .then(response => {
-        if (response.items.length > 0){
-          this.setState({
-            data: response.items[0].fields
-          });
+        if (response.items.length === 0) {
+          window.location.href = '/404';
+        } else {
+          if (response.items.length > 0){
+            this.setState({
+              data: response.items[0].fields
+            });
+          }
         }
       });
   }
@@ -37,18 +41,22 @@ class Project extends React.Component {
     if (!this.state.data) return null;
 
     return (
-      <Page page="project" title={this.state.data.title}>
+      <Page page="project" {...this.state.data}>
         <div className="jumbotron">
           <h1>{this.state.data.title}</h1>
           <h2>{this.state.data.shortContent}</h2>
         </div>
         <Image item={this.state.data.coverPhoto} height={710}/>
-        <h2>About</h2>
-        <Markup content={this.state.data.about} />
-        <h2>Challenge</h2>
-        <Markup content={this.state.data.challenge} />
-        <h2>Result</h2>
-        <Markup content={this.state.data.result} />
+        <div className="markup-content">
+          <h2>About</h2>
+          <Markup content={this.state.data.about} />
+          <h2>Challenge</h2>
+          <Markup content={this.state.data.challenge} />
+          <h2>Action</h2>
+          <Markup content={this.state.data.action} />
+          <h2>Result</h2>
+          <Markup content={this.state.data.result} />
+        </div>
       </Page>
     );
   }
