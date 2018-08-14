@@ -132,6 +132,18 @@ h3 {
  }
 
 /*
+  Loading
+*/
+
+.loading {
+  display: flex;
+  height: 450px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
   Home
  */
 

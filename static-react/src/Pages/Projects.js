@@ -2,6 +2,7 @@ import React from 'react';
 import { createClient } from 'contentful';
 import Page from '../Components/Page';
 import ProjectsThumbs from '../Components/ProjectThumbs';
+import Loading from '../Components/Loading';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -30,6 +31,10 @@ class Projects extends React.Component {
   }
 
   render() {
+    if (!this.state.projects) {
+      return <Loading />;
+    }
+
     return (
       <Page
         page="projects"

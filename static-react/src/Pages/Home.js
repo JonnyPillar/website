@@ -4,6 +4,7 @@ import Page from '../Components/Page';
 import ProjectThumbs from '../Components/ProjectThumbs';
 import Image from '../Components/Image';
 import Markup from '../Components/Markup';
+import Loading from '../Components/Loading';
 
 class Home extends React.Component {
   state = {
@@ -42,7 +43,9 @@ class Home extends React.Component {
   }
 
   render() {
-    if (!this.state.data) return null;
+    if (!this.state.data) {
+      return <Loading />;
+    }
 
     return (
       <Page page="home" title={this.state.data.title}>

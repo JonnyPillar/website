@@ -26,10 +26,13 @@ class SEO extends React.Component {
         <meta property="og:description" content={this.props.description} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Jonny Pillar" />
+        <meta property="og:image" content="/public/images/jonny-small.png" />
+
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:title" content={title}/>
         <meta name="twitter:description" content={this.props.seoDescription}/>
         <meta name="twitter:creator" content="jonnypillar"/>
+        <meta name="twitter:image" content="/public/images/jonny-small.png" />
 
         <meta name="HandheldFriendly" content="True"/>
         <meta name="MobileOptimized" content="320"/>

@@ -3,6 +3,7 @@ import { createClient } from 'contentful';
 import Page from '../Components/Page';
 import Markup from '../Components/Markup';
 import Image from '../Components/Image';
+import Loading from '../Components/Loading';
 
 class Project extends React.Component {
   constructor(props) {
@@ -38,7 +39,9 @@ class Project extends React.Component {
   }
 
   render() {
-    if (!this.state.data) return null;
+    if (!this.state.data) {
+      return <Loading />;
+    }
 
     return (
       <Page page="project" {...this.state.data}>

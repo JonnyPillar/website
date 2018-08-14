@@ -2,6 +2,7 @@ import React from 'react';
 import { createClient } from 'contentful';
 import Page from '../Components/Page';
 import Markup from '../Components/Markup';
+import Loading from '../Components/Loading';
 
 class Now extends React.Component {
   constructor(props) {
@@ -33,7 +34,9 @@ class Now extends React.Component {
   }
 
   render() {
-    if (!this.state.data) return null;
+    if (!this.state.data) {
+      return <Loading />;
+    }
 
     return (
       <Page page="now" {...this.state.data}>
