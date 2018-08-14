@@ -3,7 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 class Image extends React.Component {
   static defaultProps = {
-    height: 200,
+    height: 210,
     offset: 50
   }
 
@@ -19,7 +19,6 @@ class Image extends React.Component {
             display: 'block',
             maxWidth:'100%',
             maxHeight: this.props.height,
-            width: 'auto',
             height: 'auto'
           }}
         />

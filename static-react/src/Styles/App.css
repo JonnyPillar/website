@@ -99,6 +99,7 @@ h3 {
 @media only screen and (max-width : 786px) {
   .footer {
     text-align: center;
+    padding: 50px 0;
   }
 }
 
@@ -203,6 +204,7 @@ h3 {
   flex-direction: column;
   color: #2b2b2b;
   flex: 1;
+  padding: 5px;
 }
 
 .projectThumbs .projectThumb:hover {
