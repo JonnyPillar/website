@@ -1,9 +1,9 @@
 import React from 'react';
-import { createClient } from 'contentful';
 import Page from '../Components/Page';
 import Markup from '../Components/Markup';
 import Image from '../Components/Image';
 import Loading from '../Components/Loading';
+import { getContent } from '../Helpers/Contentful';
 
 class Project extends React.Component {
   constructor(props) {
@@ -15,27 +15,20 @@ class Project extends React.Component {
   }
 
   componentWillMount() {
-    const client = createClient({
-      space: process.env.REACT_APP_SPACE_ID,
-      accessToken: process.env.REACT_APP_ACCESS_TOKEN
-    });
-
-    client
-      .getEntries({
-        'fields.slug': this.props.match.params.id,
-        'content_type': 'project'
-      })
-      .then(response => {
-        if (response.items.length === 0) {
-          window.location.href = '/404';
-        } else {
-          if (response.items.length > 0){
-            this.setState({
-              data: response.items[0].fields
-            });
-          }
+    getContent({
+      'fields.slug': this.props.match.params.id,
+      'content_type': 'project'
+    }).then(response => {
+      if (response.items.length === 0) {
+        window.location.href = '/404';
+      } else {
+        if (response.items.length > 0){
+          this.setState({
+            data: response.items[0].fields
+          });
         }
-      });
+      }
+    });
   }
 
   render() {

@@ -1,10 +1,10 @@
 import React from 'react';
-import { createClient } from 'contentful';
 import Page from '../Components/Page';
 import ProjectThumbs from '../Components/ProjectThumbs';
 import Image from '../Components/Image';
 import Markup from '../Components/Markup';
 import Loading from '../Components/Loading';
+import { getContent } from '../Helpers/Contentful';
 
 class Home extends React.Component {
   state = {
@@ -12,34 +12,25 @@ class Home extends React.Component {
   };
 
   componentWillMount() {
-    const client = createClient({
-      space: process.env.REACT_APP_SPACE_ID,
-      accessToken: process.env.REACT_APP_ACCESS_TOKEN
+    getContent({
+      'fields.slug': 'home',
+      'content_type': 'home'
+    }).then(response => {
+      if (response.items.length > 0){
+        this.setState({
+          data: response.items[0].fields
+        });
+      }
     });
 
-    client
-      .getEntries({
-        'fields.slug': 'home',
-        'content_type': 'home'
-      })
-      .then(response => {
-        if (response.items.length > 0){
-          this.setState({
-            data: response.items[0].fields
-          });
-        }
+    getContent({
+      'fields.showOnHomePage': true,
+      'content_type': 'project'
+    }).then(response => {
+      this.setState({
+        projects: response.items
       });
-
-    client
-      .getEntries({
-        'fields.showOnHomePage': true,
-        'content_type': 'project'
-      })
-      .then(response => {
-        this.setState({
-          projects: response.items
-        });
-      });
+    });
   }
 
   render() {

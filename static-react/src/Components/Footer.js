@@ -6,7 +6,7 @@ class Header extends React.Component {
       <footer>
         <div className="social-panel">
           <div className="social-media-circle">
-            <a href="http://www.twitter.com/jonnypillar" target="_blank" rel="noopener noreferrer">
+            <a href="http://www.twitter.com/jonnypillar" rel="noopener noreferrer" target="_blank">
               <div className="social-icon-v2"></div>
             </a>
           </div>

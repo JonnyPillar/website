@@ -32,6 +32,12 @@ h2 {
   font-weight: 400;
 }
 
+@media only screen and (max-width : 786px) {
+  h1, h2, h3 {
+    text-align: center;
+  }
+}
+
 h3 {
   font-size: 24px;
   font-weight: 400;
@@ -138,7 +144,7 @@ h3 {
 
 .loading {
   display: flex;
-  height: 450px;
+  min-height: 600px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -196,6 +202,7 @@ h3 {
 
 
 .projectThumbs {
+  min-height: 400px;
   margin-bottom: 100px;
 }
 
@@ -231,6 +238,12 @@ h3 {
   font-weight: 400;
   padding: 20px 20px 20px 0;
   height: 100px;
+}
+
+@media only screen and (max-width : 786px) {
+  .projectThumbs .projectThumb .projectThumbTitle {
+    align-self: stretch;
+  }
 }
 
 .projectThumbs .projectThumb:hover .projectThumbTitle {

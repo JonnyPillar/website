@@ -1,8 +1,8 @@
 import React from 'react';
-import { createClient } from 'contentful';
 import Page from '../Components/Page';
 import ProjectsThumbs from '../Components/ProjectThumbs';
 import Loading from '../Components/Loading';
+import { getContent } from '../Helpers/Contentful';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -14,20 +14,13 @@ class Projects extends React.Component {
   }
 
   componentWillMount() {
-    const client = createClient({
-      space: process.env.REACT_APP_SPACE_ID,
-      accessToken: process.env.REACT_APP_ACCESS_TOKEN
-    });
-
-    client
-      .getEntries({
-        'content_type': 'project'
-      })
-      .then(response => {
-        this.setState({
-          projects: response.items
-        });
+    getContent({
+      'content_type': 'project'
+    }).then(response => {
+      this.setState({
+        projects: response.items
       });
+    });
   }
 
   render() {

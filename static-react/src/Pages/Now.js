@@ -1,8 +1,8 @@
 import React from 'react';
-import { createClient } from 'contentful';
 import Page from '../Components/Page';
 import Markup from '../Components/Markup';
 import Loading from '../Components/Loading';
+import { getContent } from '../Helpers/Contentful';
 
 class Now extends React.Component {
   constructor(props) {
@@ -14,23 +14,16 @@ class Now extends React.Component {
   }
 
   componentWillMount() {
-    const client = createClient({
-      space: process.env.REACT_APP_SPACE_ID,
-      accessToken: process.env.REACT_APP_ACCESS_TOKEN
+    getContent({
+      'fields.slug': this.props.match.path.substring(1),
+      'content_type': 'page'
+    }).then(response => {
+      if (response.items.length > 0){
+        this.setState({
+          data: response.items[0].fields
+        });
+      }
     });
-
-    client
-      .getEntries({
-        'fields.slug': this.props.match.path.substring(1),
-        'content_type': 'page'
-      })
-      .then(response => {
-        if (response.items.length > 0){
-          this.setState({
-            data: response.items[0].fields
-          });
-        }
-      });
   }
 
   render() {
