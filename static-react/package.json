@@ -24,6 +24,7 @@
     "postbuild": "react-snap"
   },
   "reactSnap": {
-    "inlineCss": true
+    "inlineCss": true,
+    "removeScriptTags": true
   }
 }
