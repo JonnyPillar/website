@@ -37,7 +37,7 @@ class Projects extends React.Component {
 
         <div className="jumbotron">
           <h1>Projects</h1>
-          <h2>These are a few projects I have worked on over the past few year.</h2>
+          <h2>These are a few projects I have worked on over the past few years.</h2>
         </div>
         <ProjectsThumbs projects={this.state.projects} />
       </Page>

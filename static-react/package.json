@@ -25,6 +25,8 @@
   },
   "reactSnap": {
     "inlineCss": true,
-    "removeScriptTags": true
+    "preloadImages": true,
+    "asyncScriptTags": true,
+    "cacheAjaxRequests": true
   }
 }
