@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "contentful": "^6.1.1",
-    "jshint": "^2.9.7",
     "marksy": "^6.0.3",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
@@ -29,5 +28,10 @@
     "preloadImages": true,
     "asyncScriptTags": true,
     "cacheAjaxRequests": true
+  },
+  "devDependencies": {
+    "jshint": "^2.9.7",
+    "eslint": "^5.11.1",
+    "eslint-plugin-react": "^7.12.0"
   }
 }
