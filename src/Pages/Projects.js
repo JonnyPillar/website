@@ -32,12 +32,12 @@ class Projects extends React.Component {
       <Page
         page="projects"
         seoTitle="Projects"
-        seoDescription="These are a few samples of some of my work from the past few year."
+        seoDescription="Here are a few projects I have worked on over the past few years.."
         seoKeywords="Jonny Pillar, Projects, Software Engineer">
 
         <div className="jumbotron">
           <h1>Projects</h1>
-          <h2>These are a few projects I have worked on over the past few years.</h2>
+          <h2>Here are a few projects I have worked on over the past few years.</h2>
         </div>
         <ProjectsThumbs projects={this.state.projects} />
       </Page>

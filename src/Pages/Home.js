@@ -40,21 +40,15 @@ class Home extends React.Component {
 
     return (
       <Page page="home" title={this.state.data.title}>
-        <div className="jumbotron">
+        <div className="aboutPhoto">
+          <Image item={this.state.data.photo} height={300} />
+        </div>
+        <div className="homeJumbotron">
           <Markup content={this.state.data.jumbotron} />
         </div>
         <div>
           <h2>Recent Projects</h2>
           <ProjectThumbs projects={this.state.projects} />
-        </div>
-        <div className="aboutPhoto">
-          <Image item={this.state.data.photo} height={230} />
-        </div>
-        <div className="aboutJumbotron">
-          <Markup content={this.state.data.aboutJumbotron} />
-        </div>
-        <div className="home-content">
-          <Markup content={this.state.data.content} />
         </div>
       </Page>
     );

@@ -28,8 +28,8 @@
 */
 
 h2 {
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 @media only screen and (max-width : 786px) {
@@ -113,7 +113,7 @@ h3 {
   Jumbotron
  */
 
- .jumbotron, .aboutJumbotron {
+ .jumbotron, .homeJumbotron, .aboutJumbotron {
    display: block;
    max-width: 900px;
    padding-top: 100px;
@@ -122,6 +122,11 @@ h3 {
    margin-right: auto;
    font-size: 22px;
  }
+
+.jumbotron h2 {
+  font-weight: 400;
+  font-size: 26px;
+}
 
  .aboutJumbotron{
    padding-top: 50px;
@@ -174,8 +179,8 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
-
 
 /*
   Project Thumbs
@@ -200,10 +205,9 @@ h3 {
   }
 }
 
-
 .projectThumbs {
   min-height: 400px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
 .projectThumbs .projectThumb {
@@ -256,6 +260,20 @@ h3 {
 
 .project img {
   margin-bottom: 100px;
+}
+
+.technologies {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  border: 1px solid red;
+}
+
+.technology {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  border: 1px solid blue;
 }
 
 .social-media-circle {

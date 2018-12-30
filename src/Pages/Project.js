@@ -3,6 +3,7 @@ import Page from '../Components/Page';
 import Markup from '../Components/Markup';
 import Image from '../Components/Image';
 import Loading from '../Components/Loading';
+import ProjectTechnologies from '../Components/ProjectTechnologies';
 import { getContent } from '../Helpers/Contentful';
 
 class Project extends React.Component {
@@ -44,13 +45,15 @@ class Project extends React.Component {
         </div>
         <Image item={this.state.data.coverPhoto} height={710}/>
         <div className="markup-content">
-          <h2>About</h2>
+          <h3>Technologies</h3>
+          <ProjectTechnologies technologies={this.state.data.technologies} />
+          <h3>About</h3>
           <Markup content={this.state.data.about} />
-          <h2>Challenge</h2>
+          <h3>Challenge</h3>
           <Markup content={this.state.data.challenge} />
-          <h2>Action</h2>
+          <h3>Action</h3>
           <Markup content={this.state.data.action} />
-          <h2>Result</h2>
+          <h3>Result</h3>
           <Markup content={this.state.data.result} />
         </div>
       </Page>
