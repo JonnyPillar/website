@@ -3,7 +3,10 @@ import { createClient } from 'contentful';
 import marksy from 'marksy';
 
 export function parseMarkup(field) {
-  if (!field) return null;
+  if (!field) {
+    return null;
+  }
+
   const compile = marksy({
     createElement,
     elements: {}
@@ -13,8 +16,8 @@ export function parseMarkup(field) {
 
 export function getContent(options) {
   const client = createClient({
-    space: process.env.REACT_APP_SPACE_ID,
-    accessToken: process.env.REACT_APP_ACCESS_TOKEN
+    space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN
   });
 
   return client.getEntries(options);
