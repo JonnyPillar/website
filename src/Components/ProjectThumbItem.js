@@ -13,11 +13,13 @@ class ProjectThumbItem extends React.Component {
         <div className="projectThumbImage">
           <Image item={project.fields.logo} />
         </div>
-        <div className="projectThumbTitle">
-          <h3>{project.fields.title}</h3>
-        </div>
         <div className="projectThumbContent">
-          {project.fields.shortContent}
+          <div className="projectThumbTitle">
+            <h3>{project.fields.title}</h3>
+          </div>
+          <div className="projectThumbDescription">
+            {project.fields.shortContent}
+          </div>
         </div>
       </Link>
     );
