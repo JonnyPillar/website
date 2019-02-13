@@ -35,7 +35,7 @@ class Now extends React.Component {
       <Page page="now" {...this.state.data}>
         <div className="jumbotron">
           <h1>{this.state.data.title}</h1>
-          <h2>{'I\'m back home in Sheffield'}</h2>
+          <h2>{'I\'m in London'}</h2>
         </div>
         <div className="markup-content">
           <Markup content={this.state.data.content} />
