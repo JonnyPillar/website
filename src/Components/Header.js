@@ -13,9 +13,6 @@ class Header extends React.Component {
               </NavLink>
             </div>
             <ul className="nav navbar-nav navbar-right">
-              <NavLink activeClassName='is-active' className="nav-item nav-link" to="/now">
-                Now
-              </NavLink>
               <NavLink activeClassName='is-active' className="nav-item nav-link" to="/projects">
                 Projects
               </NavLink>
