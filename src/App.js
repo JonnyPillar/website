@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+
 import './Styles/App.css';
 import './Styles/Bootstrap.css';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
@@ -8,6 +10,8 @@ import Projects from './Pages/Projects';
 import NotFound from './Pages/NotFound';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+
+ReactGA.initialize('UA-48082705-1');
 
 class App extends Component {
   render() {

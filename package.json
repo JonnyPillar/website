@@ -8,6 +8,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-ga": "^3.2.0",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0",
     "react-progressive-bg-image": "^3.0.0",
