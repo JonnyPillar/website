@@ -1,24 +1,24 @@
 @font-face {
   font-family: 'Sailec';
-  src: url('~/fonts/Sailec%20Regular.otf') format('opentype');
+  src: url('../../public/fonts/Sailec%20Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Sailec';
-  src: url('~/fonts/Sailec%20Medium.otf') format('opentype');
+  src: url('../../public/fonts/Sailec%20Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Sailec';
-  src: url('~/fonts/Sailec%20Light.otf') format('opentype');
+  src: url('../../public/fonts/Sailec%20Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Font awesome 5 brands 400';
-  src: url('~/fonts/font-awesome.otf') format('opentype');
+  src: url('../../public/fonts/font-awesome.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
