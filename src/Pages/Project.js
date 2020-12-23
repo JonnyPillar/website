@@ -15,7 +15,7 @@ class Project extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     getContent({
       'fields.slug': this.props.match.params.id,
       'content_type': 'project'

@@ -11,7 +11,7 @@ class Home extends React.Component {
     posts: []
   };
 
-  componentWillMount() {
+  componentDidMount() {
     getContent({
       'fields.slug': 'home',
       'content_type': 'home'

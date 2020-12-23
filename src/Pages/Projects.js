@@ -13,7 +13,7 @@ class Projects extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     getContent({
       'content_type': 'project'
     }).then(response => {
