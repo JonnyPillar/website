@@ -21,3 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 *.code-workspace
 build.zip
+
+*.tfvars
+.terraform
+.terraform/*
+.env
