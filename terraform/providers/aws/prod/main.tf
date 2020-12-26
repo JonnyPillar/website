@@ -38,7 +38,9 @@ module "jonnypillar-ui" {
     aws.us_east = aws.us_east
   }
 
-  repository_owner = "JonnyPillar"
-  repository_name  = "jonnypillar-co-uk"
-  github_token     = var.github_token
+  repository_owner        = "JonnyPillar"
+  repository_name         = "jonnypillar-co-uk"
+  github_token            = var.github_token
+  contentful_space_id     = var.contentful_space_id
+  contentful_access_token = var.contentful_access_token
 }
