@@ -28,7 +28,8 @@
     "inlineCss": true,
     "preloadImages": true,
     "asyncScriptTags": true,
-    "cacheAjaxRequests": true
+    "cacheAjaxRequests": true,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
   "devDependencies": {
     "eslint": "^7.11.0",
