@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   parameter-store:
-    REACT_APP_SPACE_ID: "contentful_space_id_parameter"
+    REACT_APP_SPACE_ID: "contentful_space_id"
     REACT_APP_ACCESS_TOKEN: "contentful_access_token"
 
 phases:
