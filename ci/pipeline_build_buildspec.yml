@@ -12,6 +12,8 @@ phases:
 
   pre_build:
     commands:
+      - sudo apt-get update
+      - sudo apt-get --assume-yes install chromium-browser
       - yarn install
   build:
     commands:
@@ -25,4 +27,4 @@ artifacts:
 
 cache:
   paths:
-    - 'node_modules/**/*'
+    - "node_modules/**/*"
